@@ -1,11 +1,11 @@
 import express from "express";
 
+import { usersRoutes } from "./routes/users.routes";
+
 const app = express();
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  return res.status(200).json({ ok: true });
-});
+app.use("/api/v1/users", usersRoutes);
 
 app.listen(3333, () => console.log("Server is running!"));
