@@ -9,21 +9,33 @@
  <a href="#autor">Autor</a>
 </p>
 
+<br>
+
 <h1 align="center">🎲 Rodando o Back End (servidor)</h1>
 
-# Clone este repositório
+<h2>Clone este repositório</h2>
 $ git clone <https://github.com/caiopratali/passmanager-api-node>
 
-# Acesse a pasta do projeto no terminal/cmd
+#
+
+<h2>Acesse a pasta do projeto no terminal/cmd</h2>
 $ cd passmanager-api-node
 
-# Abra o projeto no vscode
+#
+
+<h2>Abra o projeto no vscode</h2>
 $ code .
 
-# Instale as dependências
+# 
+
+<h2>Instale as dependências</h2>
 $ yarn
 
-# Execute a aplicação em modo de desenvolvimento
+# 
+
+<h2>Execute a aplicação em modo de desenvolvimento</h2>
 $ yarn dev
+
+#
 
 # O servidor inciará na porta:3333 - acesse <http://localhost:3333> 
