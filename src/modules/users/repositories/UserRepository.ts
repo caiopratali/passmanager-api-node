@@ -1,3 +1,5 @@
+import { writeFileSync, readFileSync } from "fs";
+
 import { User } from "../model/User";
 import {
   ICreateUserDTO,
@@ -11,7 +13,9 @@ class UserRepository implements IUserRepository {
   private static INSTANCE: UserRepository;
 
   private constructor() {
-    this.users = [];
+    const data = readFileSync("data.json", "utf-8");
+    const dataJson = JSON.parse(data);
+    this.users = dataJson;
   }
 
   public static getInstance(): UserRepository {
@@ -32,6 +36,9 @@ class UserRepository implements IUserRepository {
     });
 
     this.users.push(user);
+
+    const data = JSON.stringify(this.users);
+    writeFileSync("data.json", data);
   }
 
   list(): User[] {
@@ -59,16 +66,24 @@ class UserRepository implements IUserRepository {
     };
 
     this.users[userIndex] = user;
+    const data = JSON.stringify(this.users);
+    writeFileSync("data.json", data);
   }
 
   deleteUser(id: string): void {
     const userIndex = this.users.findIndex((user) => user.id === id);
 
     this.users.splice(userIndex, 1);
+
+    const data = JSON.stringify(this.users);
+    writeFileSync("data.json", data);
   }
 
   deleteAllUsers(): void {
     this.users = [];
+
+    const data = JSON.stringify(this.users);
+    writeFileSync("data.json", data);
   }
 }
 
