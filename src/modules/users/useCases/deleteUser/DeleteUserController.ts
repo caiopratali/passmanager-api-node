@@ -6,11 +6,15 @@ class DeleteUserController {
   constructor(private deleteUserUseCase: DeleteUserUseCase) {}
 
   handle(request: Request, response: Response): Response {
-    const { id } = request.params;
+    try {
+      const { id } = request.params;
 
-    this.deleteUserUseCase.execute({ id });
+      this.deleteUserUseCase.execute({ id });
 
-    return response.send();
+      return response.send();
+    } catch (error) {
+      return response.status(400).json({ message: error.message });
+    }
   }
 }
 

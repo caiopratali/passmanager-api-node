@@ -6,12 +6,16 @@ class UpdateUserController {
   constructor(private updateUserUseCase: UpdateUserUseCase) {}
 
   handle(request: Request, response: Response): Response {
-    const { id } = request.params;
-    const { email, password } = request.body;
+    try {
+      const { id } = request.params;
+      const { email, password } = request.body;
 
-    this.updateUserUseCase.execute({ id, email, password });
+      this.updateUserUseCase.execute({ id, email, password });
 
-    return response.status(200).send();
+      return response.send();
+    } catch (error) {
+      return response.status(400).json({ message: error.message });
+    }
   }
 }
 

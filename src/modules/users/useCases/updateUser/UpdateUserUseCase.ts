@@ -11,6 +11,8 @@ class UpdateUserUseCase {
 
     if (!userAlreadyExists) {
       throw new Error("User not found!");
+    } else if (!email) {
+      throw new Error("Please fill in the field you want to change!");
     }
 
     this.userRepository.update({ id, email, password });
