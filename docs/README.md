@@ -1,17 +1,46 @@
-# PassManager
+# 🔐 PassManager
 ---
 
-<h1 align="center">PassManager - API</h1>
-<p align="center">API para gerenciamento de senhas feita com node e express.</p>
+<h1 align="center"><img src="https://img.icons8.com/clouds/2x/password-window.png"/></h1>
+
+<h1 align="center">🔒 PassManager - API 🔓</h1>
+<p align="center"><strong>API para gerenciamento de senhas feita com node e express.</strong></p>
+
+<br>
+
+A API foi desenvolvida com a intenção de passar em um teste, conforme proposto no teste todos os dados quando alterados são salvos em um arquivo json <strong>"data.json"</strong> que fica localizado na raiz do projeto.
+
+<br>
+
+<h1 align="center">O que foi proposto no TESTE</h1>
+<h2>Criar API RESTFUL usando nodejs express</h2>
+- Criar 4 endpoints GET/POST/PUT/DELETE
+
+<h2>Premissas</h2>
+- Salvar (email, senha)
+- Cada usuário deverá ter um ID único
+- Gravar as informações arquivo JSON.
+
+<h2>Documentação</h2>
+
+
+HTTP | ROUTE | BODY | DESCRIÇÃO |
+--- | ------ | ------ |  ------ |
+GET | /api/v1/users | | Listar todos usuarios
+GET | /api/v1/users/user_id | | Listar único usuário
+POST | /api/v1/users | JSON (email,senha) | Criar único usuário
+PUT | /api/v1/users/user_id | JSON (email,senha) | Alterar único usuário
+DELETE | /api/v1/users | | Deletar todos usuarios
+DELETE | /api/v1/users/user_id | | Deletar único usuário
 
 <br>
 <br>
 <br>
 
-# Modo de uso
+# 🎮 Modo de uso
 ---
 
-<h1 align="center">🎲 Rodando a API </h1>
+<h1 align="center">🧑‍💻 Rodando a API </h1>
 
 <h2>Clone este repositório</h2>
 
@@ -57,10 +86,10 @@ http://localhost:3333/api/v1
 <br>
 <br>
 
-## Métodos
+## 🎯 Métodos
 ---
 
-<h1 align="center">🎲 Rotas da API </h1>
+<h1 align="center">🪧 Rotas da API </h1>
 
 
 ### GET - Listas um ou mais usuários
@@ -163,7 +192,7 @@ Usuário não encontrado
 <br>
 <br>
 
-# Maneira facil de testar
+# 😉 Maneira facil de testar
 ---
 
 <h5>Caso você queira efetuar os testes no insomnia, ao clonar o repositorio você pode importar o projeto no insomnia, deixei um arquivo json que exportei dos meus testes para facilitar.</h5>
@@ -179,7 +208,7 @@ passmanager-api-node/Insomnia_2021-07-06.json
 <br>
 <br>
 
-# 🛠 Tecnologias
+# 🚀 Tecnologias
 ---
 
 As seguintes ferramentas foram usadas na construção do projeto:
@@ -192,7 +221,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <br>
 <br>
 
-# Autor
+# 📝 Autor
 
 ---
 
