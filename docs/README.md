@@ -45,7 +45,7 @@ DELETE | /api/v1/users/user_id | | Deletar único usuário
 <h2>Clone este repositório</h2>
 
 ```bash
-$ git clone <https://github.com/caiopratali/passmanager-api-node>
+$ git clone https://github.com/caiopratali/passmanager-api-node
 ```
 
 
