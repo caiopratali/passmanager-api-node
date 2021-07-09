@@ -9,4 +9,4 @@
 - TypeScript
 
 [GitHub](https://github.com/caiopratali/passmanager-api-node)
-[Iniciar](#passmanager)
+[Iniciar](#%f0%9f%94%90-passmanager)
